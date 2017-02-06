@@ -2,5 +2,9 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-timepicker'
+  name: 'ember-timepicker',
+
+  isDevelopingAddon() {
+    return true;
+  }
 };
