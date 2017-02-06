@@ -4,8 +4,10 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    'jquery-timepicker': {
-      import: ['jquery.timepicker.js', 'jquery.timepicker.css']
+    nodeAssets: {
+      'jquery-timepicker': {
+        import: ['jquery.timepicker.js', 'jquery.timepicker.css']
+      }
     }
   });
 
