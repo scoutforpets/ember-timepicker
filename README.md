@@ -40,3 +40,6 @@ There are two key ways to interact with this component:
 | `options`       | An object containing options accepted by the time picker. See [http://timepicker.co/options/](http://timepicker.co/options/) for available options.|
 
 This component extends `Ember.TextField` and therefore can accept any actions or options available on that component. See the [API docs](http://emberjs.com/api/classes/Ember.Templates.helpers.html#method_input) for more information.
+
+## Credits
+Kudos to [Willington Vega](https://github.com/wvega) for writing the time picker plugin used in this project.
