@@ -1,12 +1,15 @@
 {
   "name": "ember-timepicker",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A simple Ember add-on that wraps the timepicker.co plugin",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "time picker",
+    "timepicker",
+    "javascript time picker"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "James Dixon <jim.w.dixon@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
