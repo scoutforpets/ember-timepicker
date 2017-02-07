@@ -1,27 +1,42 @@
 # ember-timepicker
 
-This README outlines the details of collaborating on this Ember addon.
+This is a simple Ember add-on that wraps the [http://timepicker.co/](http://timepicker.co/) jQuery plugin.
 
-## Installation
+This plugin isn't your typical time picker (which I think is a good thing!), so be sure to [review the demos](http://timepicker.co/demos/) before installing.
 
-* `git clone <repository-url>` this repository
-* `cd ember-timepicker`
-* `npm install`
-* `bower install`
+## Usage
 
-## Running
+Using this bad boy is simple:
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```hbs
+// template.hbs
+{{ember-timepicker
+  onChange=(action 'onChange')
+  options=yourOptions}}
+```
 
-## Running Tests
+```js
+// controller.js
+import Ember from 'ember';
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+export default Ember.Controller.extend({
+    options: {
+      dropdown: false
+    },
 
-## Building
+    actions: {
+        onChange(selectedTime) {
+            console.log(selectedTime);
+        }
+    }
+});
+```
 
-* `ember build`
+There are two key ways to interact with this component:
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+| Property        | Description         |
+| --------------- |---------------------|
+| `onChange`     | An action that's passed the `Date` object returned from the time picker. **Note:** the returned object is a Javascript `Date`, so you'll need to extract the time yourself.|
+| `options`       | An object containing options accepted by the time picker. See [http://timepicker.co/options/](http://timepicker.co/options/) for available options.|
+
+This component extends `Ember.TextField` and therefore can accept any actions or options available on that component. See the [API docs](http://emberjs.com/api/classes/Ember.Templates.helpers.html#method_input) for more information.
