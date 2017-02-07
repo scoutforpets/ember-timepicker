@@ -4,7 +4,11 @@
 module.exports = {
   name: 'ember-timepicker',
 
-  isDevelopingAddon() {
-    return true;
+  options: {
+    nodeAssets: {
+      'jquery-timepicker': {
+        import: ['jquery.timepicker.js', 'jquery.timepicker.css']
+      }
+    }
   }
 };
