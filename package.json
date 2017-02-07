@@ -22,8 +22,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
-    "ember-cli-htmlbars": "1.1.1",
-    "jquery-timepicker": "^1.3.3"
+    "ember-cli-htmlbars": "1.1.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -48,8 +47,8 @@
     "ember-load-initializers": "^0.6.0",
     "ember-resolver": "^2.0.3",
     "ember-source": "^2.11.0",
-    "ember-welcome-page": "^2.0.2",
-    "loader.js": "^4.0.10"
+    "loader.js": "^4.0.10",
+    "jquery-timepicker": "^1.3.3"
   },
   "engines": {
     "node": ">= 0.12.0"
