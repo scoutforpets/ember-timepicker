@@ -1,10 +1,9 @@
 import Ember from 'ember';
 import layout from '../templates/components/ember-timepicker';
-import { InvokeActionMixin } from 'ember-invoke-action';
 
 const { TextField, assign } = Ember;
 
-export default TextField.extend(InvokeActionMixin, {
+export default TextField.extend({
   layout,
 
   classNames: ['ember-timepicker'],
@@ -17,7 +16,7 @@ export default TextField.extend(InvokeActionMixin, {
 
     // Connect the `onChange` action to this library's `change` event.
     const options = assign({
-      change: (...args) => this.invokeAction('onChange', ...args)
+      change: (...args) => this.get('onChange')(...args)
     }, this.get('options'));
 
     // Create a new instance of the timepicker.
